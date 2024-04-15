@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1 Auto Insurance Calculator
+  <br>
+  <br>
+  form(method="POST" action="/auto_insurance") 
+    label(for='car_value') Car Value
+    <input id='car_value' name='car_value'>
+    <br>
+    <br>
+    label(for='driver_age') Driver Age
+    <input id='driver_age' name='driver_age'>
+    <br>
+    <p>Please select your Location:</p>
+    <input type="radio" value="dense_urban" name="dwelling_area">
+    <label for="dense_urban">Dense Urban</label><br>
+    <input type="radio" value="urban" name="dwelling_area">
+    <label for="urban">Urban</label><br>
+    <input type="radio" value="rural" name="dwelling_area">
+    <label for="rural">Rural</label><br>
+    <br>
+    <p>Please select the correct box:</p>
+    <input type="radio" value="none" name="accidents">
+    <label for="none">No accidents</label><br>
+    <input type="radio" value="one_in_five" name="accidents">
+    <label for="one_in_five">1 in the last 5 years</label><br>
+    <input type="radio" value="two_in_five" name="accidents">
+    <label for="two_in_five">2 in the last 5 years</label><br>
+    <br>
+    button(type="Submit") Submit

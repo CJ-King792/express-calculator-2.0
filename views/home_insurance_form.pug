@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  h1 Home Insurance Calculator
+  <br>
+  <br>
+  form(method="POST" action="/home_insurance") 
+    <label for='home_age'>Home Age</label>
+    <input id="home_age" name="home_age">
+    <br>
+    <p>Please select your dwelling type:</p>
+    <input type="radio" value="single" name="dwelling_type">
+    <label for="single">Single Dwelling</label><br>
+    <input type="radio" value="apartment" name="dwelling_type">
+    <label for="apartment">Apartment</label><br>
+    <input type="radio" value="bungalow" name="dwelling_type">
+    <label for="bungalow">Bungalow</label><br>
+    <input type="radio" value="semi" name="dwelling_type">
+    <label for="semi">Semi-Attached</label><br>
+    <br>
+    <br>
+    <p>Please select your heating type:</p>
+    <input type="radio" value="electric" name="heating_type">
+    <label for="electric">Electric</label><br>
+    <input type="radio" value="oil" name="heating_type">
+    <label for="oil">Oil</label><br>
+    <input type="radio" value="wood" name="heating_type">
+    <label for="wood">Wood</label><br>
+    <input type="radio" value="gas" name="heating_type">
+    <label for="gas">Gas</label><br>
+    <input type="radio" value="other" name="heating_type">
+    <label for="other">Other</label><br>
+    <br>
+    <button type="Submit">Submit</button>
